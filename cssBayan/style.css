@@ -1,0 +1,146 @@
+
+#container{
+    background:  
+    #ebebe0;
+    display: block;
+    width:65vw;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+#accordion{
+
+    padding: 3% 10%;
+    width: 80%;
+    
+
+}
+#accordion li{
+    
+    list-style: none;
+    width: 100%;
+    border-top: 0.1rem solid  #ccccb3;
+    cursor: pointer; 
+      
+}
+
+#accordion li label{
+
+    display: flex;
+    flex-direction: column;
+    
+    cursor: pointer; 
+}
+
+#accordion li label>span.text-accordion{
+    min-height: 2.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text-accordion{
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+}
+#accordion input[type="radio"]{
+    display: none;
+}
+
+.btn{
+    margin-bottom: 1%; 
+    display:flex;
+    justify-content: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out;
+
+}
+ input[type="radio"]:checked + label>div.btn  {
+    opacity: 1;
+    max-height: 15rem;
+ 
+
+}
+.plus{
+    display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 815px) {
+    .text-accordion{
+        font-size: 1rem;
+    }
+    .btn{
+        height: 8rem;
+    }
+    svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+ 
+} 
+@media screen and (min-width: 820px) and (max-width: 1900px) {
+    .text-accordion{
+        font-size: 1.4rem;
+    }
+    .btn{
+        height: 15rem;
+    }
+    svg{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+ 
+} 
+@media screen and (min-width: 2000px)  {
+    .text-accordion{
+        font-size: 1.4rem;
+    }
+    .btn{
+        height: 15rem;
+    }
+    svg{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+ 
+} 
+
+    
+
+input[type="radio"]:checked + label>span.text-accordion  {
+    color:black;
+
+}
+ input[type="radio"]:checked +label .plus{
+    transform: rotate(45deg);
+}
+@media (hover:hover)
+{
+    #accordion:hover li label .plus{
+        display: initial;
+    }
+    #accordion:hover li label >span{
+        color: black;
+    }
+    #accordion li:hover label > div{
+        opacity: 1;
+        max-height: 15rem;
+    }
+    #accordion li:hover label .plus{
+        transform: rotate(45deg);
+    }
+}
+
+#accordion li:active label> span{
+    color: blue;
+}
+#accordion li:active label >svg path{
+    stroke: "blue";
+}
+#accordion li:active label {
+     opacity: 0.5;
+}
