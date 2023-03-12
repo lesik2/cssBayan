@@ -12,7 +12,7 @@
 
 #accordion{
 
-    padding: 1rem 6rem;
+    padding: 3% 10%;
     width: 80%;
     
 
@@ -69,6 +69,48 @@
 .plus{
     display: none;
 }
+@media screen and (min-width: 320px) and (max-width: 815px) {
+    .text-accordion{
+        font-size: 1rem;
+    }
+    .btn{
+        height: 8rem;
+    }
+    svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+ 
+} 
+@media screen and (min-width: 820px) and (max-width: 1900px) {
+    .text-accordion{
+        font-size: 1.4rem;
+    }
+    .btn{
+        height: 15rem;
+    }
+    svg{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+ 
+} 
+@media screen and (min-width: 2000px)  {
+    .text-accordion{
+        font-size: 1.4rem;
+    }
+    .btn{
+        height: 15rem;
+    }
+    svg{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+ 
+} 
+
+    
+
 input[type="radio"]:checked + label>span.text-accordion  {
     color:black;
 
@@ -76,19 +118,23 @@ input[type="radio"]:checked + label>span.text-accordion  {
  input[type="radio"]:checked +label .plus{
     transform: rotate(45deg);
 }
-#accordion:hover li label .plus{
-    display: initial;
+@media (hover:hover)
+{
+    #accordion:hover li label .plus{
+        display: initial;
+    }
+    #accordion:hover li label >span{
+        color: black;
+    }
+    #accordion li:hover label > div{
+        opacity: 1;
+        max-height: 15rem;
+    }
+    #accordion li:hover label .plus{
+        transform: rotate(45deg);
+    }
 }
-#accordion:hover li label >span{
-    color: black;
-}
-#accordion li:hover label > div{
-    opacity: 1;
-    max-height: 15rem;
-}
-#accordion li:hover label .plus{
-    transform: rotate(45deg);
-}
+
 #accordion li:active label> span{
     color: blue;
 }
